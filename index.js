@@ -5,8 +5,8 @@ import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 // import routes
-import recipeRoutes from './routes/recipe.js';
-
+import postRoutes from './routes/post.js';
+import userRoutes from './routes/user.js'
 // set port
 const PORT = process.env.PORT || 5000;
 
@@ -26,11 +26,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(PATH, 'public')));
 
 // create tables
-// createUserTable();
-// createRecipeTable();
+// createUsersTable();
+// createPostsTable();
 
 // use routes
-// app.use(userRoutes);
+app.use(userRoutes);
 
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -41,7 +41,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use(recipeRoutes);
+app.use(postRoutes);
 
 // error
 app.use((err, req, res, next) => {

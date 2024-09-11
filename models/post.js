@@ -1,8 +1,8 @@
 import query from '../config/db.js';
 
-const createRecipeTable = async () => {
+const createPostTable = async () => {
     try {
     } catch (err) {}
 };
 
-export default createRecipeTable;
+export default createPostTable;
