@@ -1,8 +1,8 @@
 import query from '../config/db.js';
 
-const createUserTable = async () => {
+const createUsersTable = async () => {
     try {
     } catch (err) {}
 };
 
-export default createUserTable;
+export default createUsersTable;
