@@ -1,6 +1,5 @@
 import query from '../config/db.js';
 
-
 const postsControllers = {
     getAllPosts: async (req, res) => {},
     getOnePost: async (req, res) => {},

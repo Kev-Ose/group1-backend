@@ -4,10 +4,9 @@ import cookieParser from 'cookie-parser';
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
-
 // import routes
 import postRoutes from './routes/post.js';
-import userRoutes from './routes/user.js'
+import userRoutes from './routes/user.js';
 
 import cors from 'cors';
 // set port
@@ -20,7 +19,7 @@ const PATH = dirname(__filename);
 // initialize express
 const app = express();
 
-app.use(cors("*"))
+app.use(cors('*'));
 // parse body and cookies
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -38,7 +37,7 @@ app.use(userRoutes);
 
 app.use(express.urlencoded({ extended: true }));
 // This is required to handle urlencoded data
-app.use(express.json()); 
+app.use(express.json());
 
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -48,7 +47,6 @@ app.use(function (req, res, next) {
     );
     next();
 });
-
 
 app.use(postRoutes);
 

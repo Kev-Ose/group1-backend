@@ -4,10 +4,9 @@ import userControllers from '../controllers/user.js';
 
 const router = express.Router();
 
-
 // routes
 router.post('/api/register', userControllers.register);
-router.post('/api/login',userControllers.login);
-router.post('/api/logout',userControllers.logout);
+router.post('/api/login', userControllers.login);
+router.post('/api/logout', userControllers.logout);
 
 export default router;

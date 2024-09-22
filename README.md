@@ -8,9 +8,9 @@ This project template facilitates the development of web applications using Expr
 - Clone your new project locally (everyone)
 - Locally run:
 
-    npm i
-    
-    npm run dev
+  npm i
+
+  npm run dev
 
 This should get you a server running on port 5000. To test, open your browser and go to:
 
@@ -81,10 +81,9 @@ Project/
      ```
 
 4. **Create a database:**
-    ```sql
-    CREATE DATABASE your_database_name;
-    ```
-    
+   ```sql
+   CREATE DATABASE your_database_name;
+   ```
 5. **Run the application:**
 
    ```bash
@@ -113,6 +112,7 @@ DB_HOST=your_database_host
   - Registers a new user.
 
 - **POST /login**
+
   - Logs in an existing user.
 
 - **POST /logout**
