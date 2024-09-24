@@ -87,30 +87,6 @@ const usersController = {
                                 }
 
                                 return res.status(200).json({ ok: true, message: `Profile updated successfully` });
-
-
-            //                     res.status(200).json({
-            //                         ok: true,
-            //                         message: `Your password has been changed`
-            //                 })
-            //                 }else{
-            //                     res.status(409).json({
-            //                         ok: false,
-            //                         message: `Your password is not match`
-            //                     });
-            //                 }
-                            
-            //             }else {
-            //                 res.status(409).json({
-            //                     ok: false,
-            //                     message: `Your password is not correct`
-            //                 });
-            //             }
-            //         })
-            //     const updatePassword = await query(
-            //         'UPDATE users SET password = ? WHERE id = ?', [img, id])
-            // }
-            // // const myPosts = await query(getMyPostQuery, uid);
         
         } catch (err) {
             return res.status(500).json({ ok: false, message: err.message });
