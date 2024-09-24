@@ -37,9 +37,9 @@ const postsControllers = {
             const onePost = await query(getOnePostQuery, id);
             if (onePost.length > 0) {
                 
-                // const viewCount = onePost[0].view + 1 ;
+                const viewCount = onePost[0].view + 1 ;
     
-                // const sendViewQuery = await query('UPDATE  posts SET view = ?  WHERE id = ?', [viewCount, id]) 
+                const sendViewQuery = await query('UPDATE  posts SET view = ?  WHERE id = ?', [viewCount, id]) 
                 return res.status(200).json(onePost);
             } else {
                 return res.status(404).json({
