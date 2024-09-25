@@ -30,7 +30,7 @@ const authControllers = {
 
     const isEmailValid = validateEmail(email);
     const isPasswordValid = validatePassword(password);
-    const isMatch = matchPasswords(password, verifyPassword);
+    const isMatch = matchPasswords(password, confirmPassword);
     if (isEmailValid && isPasswordValid && isMatch) {
 
         // Hash the password
@@ -72,7 +72,10 @@ const authControllers = {
         const userExist = await query('SELECT * FROM users WHERE email = ?', [email]);
 
         if (userExist.length === 0) {
-            return res.status(401).send(JSON.stringify('Invalid email or password'));
+            return res.status(401).json({
+                ok: false,
+                message: `Email Dose Not Exist`
+            });
         }
         else {
             // check password
