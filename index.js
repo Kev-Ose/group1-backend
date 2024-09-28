@@ -1,12 +1,11 @@
 import express from 'express';
-import cookieParser from 'cookie-parser';
 import dotenv from "dotenv";
+dotenv.config()
+import cookieParser from 'cookie-parser';
 import cors from 'cors';
-
 import { v2 as cloudinary } from 'cloudinary';
 import multer from "multer";
 import {CloudinaryStorage} from 'multer-storage-cloudinary';
-
 
 // import routes
 import postsRoutes from './routes/post.js';
@@ -18,8 +17,7 @@ import usersRoutes from "./routes/users.js";
 const app = express();
 
 // set port
-dotenv.config()
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5050;
 
 
 
