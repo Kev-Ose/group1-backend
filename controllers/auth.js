@@ -99,7 +99,7 @@ const authControllers = {
                         res.cookie('access_token', token , { 
                             httpOnly: true,
                             secure: false, 
-                            sameSite: 'Lax',
+                            sameSite: 'None',
                             path: '/',
                             // expires: new Date(Date.now() + 9000000000)
                             maxAge:9999999
