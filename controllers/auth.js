@@ -98,7 +98,7 @@ const authControllers = {
                         );
                         res.cookie('access_token', token , { 
                             httpOnly: true,
-                            secure: false, 
+                            secure: true, 
                             sameSite: 'None',
                             path: '/',
                             // expires: new Date(Date.now() + 9000000000)
