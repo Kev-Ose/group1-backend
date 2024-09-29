@@ -74,7 +74,7 @@ const authControllers = {
         if (userExist.length === 0) {
             return res.status(401).json({
                 ok: false,
-                message: `Email Dose Not Exist`
+                message: `Email Does Not Exist`
             });
         }
         else {
