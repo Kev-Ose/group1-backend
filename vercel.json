@@ -3,10 +3,10 @@
     "builds": [
       {
         "src": "index.js",
-        "use": "@vercel/node",
-        "installCommand": "npm install --force"
+        "use": "@vercel/node"
       }
     ],
+    "installCommand": "npm install --force",
     "routes": [
       {
         "src": "/(.*)",
