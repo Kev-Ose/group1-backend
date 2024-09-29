@@ -94,14 +94,14 @@ const authControllers = {
                         const token = jwt.sign(
                             { user: other.id },
                             process.env.TOKEN_ACCESS_SECRET,
-                            // { expiresIn: '8h' }
+                            { expiresIn: '8h' }
                         );
                         res.cookie('access_token', token , { 
                             httpOnly: true,
                             secure: false, 
                             sameSite: 'Lax',
                             path: '/',
-                            expires: new Date(Date.now() + 900000)
+                            // expires: new Date(Date.now() + 900000)
                         }); 
                         res.status(200).json(other);
                     } else {
