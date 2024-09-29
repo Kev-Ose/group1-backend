@@ -5,7 +5,7 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import { v2 as cloudinary } from 'cloudinary';
 import multer from "multer";
-import {CloudinaryStorage} from 'multer-storage-cloudinary';
+import {CloudinaryStorage} from '@fluidjs/multer-cloudinary';
 
 // import routes
 import postsRoutes from './routes/post.js';
