@@ -101,7 +101,7 @@ const authControllers = {
                             secure: false, 
                             sameSite: 'Lax',
                             path: '/',
-                            // expires: new Date(Date.now() + 900000)
+                            expires: new Date(Date.now() + 900000)
                         }); 
                         res.status(200).json(other);
                     } else {
